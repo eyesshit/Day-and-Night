@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day and Night</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="button-theme">
+        <input type="button" value="Сменить тему!" id="but-theme">
+        <h1>Разработчик: Рустам Багиев</h1>
+    </div>
+    <div class="backgr">
+        <div class="star stars-item-1"></div>
+        <div class="star stars-item-2"></div>
+        <div class="star stars-item-3"></div>
+        <div class="star stars-item-4"></div>
+        <div class="star stars-item-5"></div>
+        <div class="star stars-item-6"></div>
+        <div class="sun-moon">
+            <div class="part-moon1"></div>
+            <div class="part-moon2"></div>
+            <div class="part-moon3"></div>
+        </div>
+        <div class="oblako obl-item1"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item2"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item3"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item4"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item5"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item6"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item7"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item8"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item9"> <div class="part-oblako"></div></div>
+        <div class="oblako obl-item10"> <div class="part-oblako"></div></div>
+    </div>
+    <script>
+        const butTheme = document.querySelector("#but-theme");
+        butTheme.addEventListener("click", function(){
+            if(document.documentElement.hasAttribute("theme")){
+                document.documentElement.removeAttribute("theme");
+            }
+            else{
+                document.documentElement.setAttribute("theme", "dark");
+            }
+        });
+    </script>
+</body>
+</html>

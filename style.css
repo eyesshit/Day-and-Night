@@ -1,0 +1,217 @@
+@keyframes sun-svet{
+    from{
+        box-shadow: var(--glow-start);
+    }
+    50%{
+        box-shadow: var(--glow-median);
+    }
+    to{
+        box-shadow: var(--glow-start);
+    }
+}
+
+
+@keyframes movement-cloud{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(2600px);
+    }
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+:root{
+    --bckcolor: rgb(149, 255, 255);
+    --sun-moon: rgb(235, 213, 15);
+    --cloud: aliceblue;
+    --glow-start: 0 0 25px 10px rgba(246, 255, 114, 0.95);
+    --glow-median: 0 0 30px 40px rgba(246, 255, 114, 0.95);
+    --button:rgb(7, 13, 46);
+    --text-b:rgb(149, 255, 255);
+    --text: rgb(7, 13, 46);
+}
+
+:root[theme='dark']{
+    --bckcolor: rgb(7, 13, 46);
+    --sun-moon: rgb(194, 193, 184);
+    --cloud: rgb(240, 248, 255, 0.45);
+    --stars: rgb(235, 213, 15);
+    --glow-start: 0 0 25px 10px rgba(230, 230, 230, 0.95);
+    --glow-median: 0 0 30px 40px rgba(230, 230, 230, 0.95);
+    --button: rgb(149, 255, 255);
+    --text-b: rgb(7, 13, 46);
+    --part-moon: rgba(145, 145, 145, 0.466);
+    --text: rgb(149, 255, 255);
+}
+
+.backgr{
+    background-color:var(--bckcolor);
+    height: 100vh;
+    width: 100vw;
+}
+.sun-moon{
+    position:absolute;
+    left: 42%;
+    top: 40%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--sun-moon);
+    animation-name: sun-svet;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.part-moon1{
+    position: relative;
+    background-color:var(--part-moon);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 20px;
+    left:10px;
+}
+.part-moon2{
+    position: relative;
+    background-color:var(--part-moon);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 40px;
+    left:50px;
+}
+.part-moon3{
+    position: relative;
+    background-color:var(--part-moon);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    top: 70px;
+    left:-20px;
+}
+
+.oblako{
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    background-color: var(--cloud);
+    border-radius: 45px;
+    animation-name: movement-cloud;
+    animation-iteration-count: infinite;
+    overflow: visible;
+    animation-timing-function: linear;
+}
+
+.part-oblako{
+    position: relative;
+    bottom: 40px;
+    width: 100px;
+    height: 100px;
+    background-color: inherit;
+    border-radius: 50%;
+}
+
+.obl-item1{
+    top: 15%;
+    left: -250px;
+    animation-duration: 18s;
+}
+.obl-item2{
+    top: 60%;
+    left: -350px;
+    animation-duration: 24s;
+}
+.obl-item3{
+    top: 55%;
+    left: -400px;
+    animation-duration: 27s;
+}
+.obl-item4{
+    top: 20%;
+    left: -150px;
+    animation-duration: 21s;
+}
+.obl-item5{
+    top: 40%;
+    left: -350px;
+    animation-duration: 23s;
+}
+.obl-item6{
+    top: 65%;
+    left: -450px;
+    animation-duration: 29s;
+}
+.obl-item7{
+    top: 35%;
+    left: -230px;
+    animation-duration: 26s;
+}
+.obl-item8{
+    top: 23%;
+    left: -293px;
+    animation-duration: 32s;
+}
+.obl-item9{
+    top: 85%;
+    left: -350px;
+    animation-duration: 25s;
+}
+.obl-item10{
+    top: 80%;
+    left: -550px;
+    animation-duration: 20s;
+}
+
+.button-theme{
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+}
+.button-theme input{
+    border-radius: 25px;
+    border-color: transparent;
+    background-color: var(--button);
+    color: var(--text-b);
+}
+
+.star{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--stars);
+}
+
+.stars-item-1{
+    top: 450px;
+    left: 500px;
+}
+.stars-item-2{
+    top: 500px;
+    left: 1200px;
+}
+.stars-item-3{
+    top: 155px;
+    left: 888px;
+}
+.stars-item-4{
+    top: 900px;
+    left: 444px;
+}
+.stars-item-5{
+    top: 199px;
+    left: 1350px;
+}
+.stars-item-6{
+    bottom: 100px;
+    left: 350px;
+}
